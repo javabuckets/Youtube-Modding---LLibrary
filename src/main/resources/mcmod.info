@@ -1,0 +1,16 @@
+[
+{
+  "modid": "modid",
+  "name": "Mod Name",
+  "description": "Example placeholder mod.",
+  "version": "Alpha",
+  "mcversion": "1.9.4",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Thom"],
+  "credits": "The Forge and FML guys, for making this example",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
