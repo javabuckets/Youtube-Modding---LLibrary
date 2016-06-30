@@ -1,6 +1,8 @@
 package com.thom.main;
 
 import com.thom.init.ModBlocks;
+import com.thom.init.ModCommands;
+import com.thom.init.ModCreativeTabs;
 import com.thom.init.ModItems;
 import com.thom.proxies.ServerProxy;
 import com.thom.reference.Reference;
@@ -12,6 +14,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION)
 public class Main 
@@ -25,6 +28,7 @@ public class Main
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		ModCreativeTabs.init();
 		ModBlocks.init();
 		ModItems.init();
 	}
@@ -40,5 +44,11 @@ public class Main
 	public void postInit(FMLPostInitializationEvent event)
 	{
 		
+	}	
+	
+	@EventHandler
+	public void onServerStarting(FMLServerStartingEvent event)
+	{
+		ModCommands.init(event);
 	}
 }

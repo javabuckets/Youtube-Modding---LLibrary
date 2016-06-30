@@ -13,7 +13,7 @@ public class ModBlocks
 	
 	public static void init()
 	{
-		simple = new Block(Material.GROUND).setUnlocalizedName("simple");
+		simple = new Block(Material.GROUND).setUnlocalizedName("simple").setCreativeTab(ModCreativeTabs.creativeTab);
 		BlockRegistry.registerBlock(simple);
 	}
 	
